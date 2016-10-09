@@ -1,2 +1,2 @@
-# starter-wordpress-theme
-Starter Wordpress Theme for free
+# Wordpress Starter Themes
+Free Wordpress themes.
