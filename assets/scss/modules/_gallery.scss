@@ -1,0 +1,72 @@
+.gallery {
+    margin: 15px 0;
+
+    &-columns-6 {
+        @include make-row();
+
+        .gallery-item {
+            @include make-col(2);
+            
+            margin: 0;
+            padding: 0 15px 15px;
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &-columns-4 {
+        @include make-row();
+
+        .gallery-item {
+            @include make-col(3);
+            
+            margin: 0;
+            padding: 0 15px 15px;
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    
+    &-columns-3 {
+        @include make-row();
+
+        .gallery-item {
+            @include make-col(4);
+            
+            margin: 0;
+            padding: 0 15px 15px;
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    
+    &-columns-2 {
+        @include make-row();
+
+        .gallery-item {
+            @include make-col(6);
+            
+            margin: 0;
+            padding: 0 15px 15px;
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    
+    &-caption {
+        font-size: .85rem;
+        color: #777;
+    }
+}

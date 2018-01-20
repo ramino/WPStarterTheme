@@ -1,0 +1,12 @@
+@mixin box-title() {
+	color: $brand-primary;
+	text-transform: uppercase;
+
+	&:after {
+		content: "";
+		border-top: 3px solid $brand-secondary;
+		width: 60px;
+		margin-top: 10px;
+		display: block;
+	}
+}

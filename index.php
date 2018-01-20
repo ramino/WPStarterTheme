@@ -16,48 +16,46 @@
 
 get_header(); ?>
 
-	<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-		<div id="primary" class="content-area">
+		<?php if ( have_posts() ) : ?>
 
-			<main id="main" class="site-main" role="main">
-				
-				<div class="site-box">
-					<?php get_template_part('templates/part-1'); ?>
-				</div>
-				
-				<div class="site-box site-box-light">
-					<?php get_template_part('templates/part-2'); ?>
-				</div>
-				
-				<div class="site-box">
-					<?php get_template_part('templates/part-3'); ?>
-				</div>
-				
-				<div class="site-box site-box-secondary">			
-					<?php get_template_part('templates/part-4'); ?>
-				</div>
-				
-				<div class="site-box site-box-primary">
-					<?php get_template_part('templates/part-5'); ?>
-				</div>
-					
-				<div class="site-box">
-					<?php get_template_part('templates/part-6'); ?>
-				</div>
+			<?php if ( is_home() && ! is_front_page() ) : ?>
+				<header>
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				</header>
+			<?php endif; ?>
 
-				<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-					<div id="widget-area" class="widget-area" role="complementary">
-						<?php dynamic_sidebar( 'sidebar-2' ); ?>
-					</div><!-- .widget-area -->
-				<?php endif; ?>
+			<?php
+			// Start the loop.
+			while ( have_posts() ) : the_post();
 
-			</main><!-- .site-main -->
-		</div><!-- .content-area -->
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'content', get_post_format() );
 
-	</div>
+			// End the loop.
+			endwhile;
 
+			// Previous/next page navigation.
+			the_posts_pagination( array(
+				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
+				'next_text'          => __( 'Next page', 'twentyfifteen' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+			) );
 
-	<?php //get_sidebar(); ?>
+		// If no content, include the "No posts found" template.
+		else :
+			get_template_part( 'content', 'none' );
+
+		endif;
+		?>
+
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
 
 <?php get_footer(); ?>

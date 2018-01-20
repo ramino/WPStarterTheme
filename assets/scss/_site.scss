@@ -1,0 +1,73 @@
+.site-body {}
+
+.site-banner {
+    min-height: 320px;
+    position: relative;
+}
+
+.site-brand-title {
+    margin-bottom: 0;
+}
+
+.site-title {
+    @extend .box-title;
+}
+
+.site-content {
+    margin: 20px 0 40px;
+}
+
+.site-about-image {
+    min-height: 300px;
+    width: 200px;
+    background-color: $brand-light;
+}
+
+.site-box {
+    padding: 40px 0;
+    background-color: #fff;
+    
+    &.site-box-light {
+        background-color: $site-box-light;
+        color: $brand-primary;
+    }
+    
+    &.site-box-primary {
+        background-color: $brand-primary;
+        color: #fff;
+        padding: 20px;
+    }
+    
+    &.site-box-secondary {
+        background-color: $brand-secondary;
+        color: #fff;
+    }
+    
+    .btn {
+        margin-top: 10px;
+    }
+}
+
+.site-box-title {
+    @include box-title();
+
+    margin-bottom: 20px;
+}
+
+.site-footer {
+    background-color: $brand-primary;
+    padding: 20px 0;
+}
+
+.site-edit {
+    text-align: center;
+    margin: 20px 0;
+    
+    a {
+        @extend .btn;
+        @extend .btn-primary;
+        
+        color: #fff;
+    }
+}
+

@@ -1,0 +1,72 @@
+.form--contact {
+    margin-top: 40px;
+    font-size: .85rem;
+    
+    .label-control {
+        display: block;
+        
+        span {
+            display: block;
+        }
+    }
+    
+    .wpcf7-form-control {
+        @extend .form-control;
+
+        width: 100%;
+        
+        &.wpcf7-not-valid {
+            border-color: $brand-danger;
+        }
+        
+        &:focus {
+            border-color: $brand-secondary;
+        }
+    }
+    
+    .wpcf7-textarea {
+        max-height: 118px;
+    }
+    
+    .wpcf7-submit {
+        @extend .btn;
+        @extend .btn-primary;
+        
+        width: auto;
+    }
+    
+    .wpcf7-response-output {
+        @extend .alert;
+        
+        margin: 10px 0;
+    }
+    
+    .wpcf7-validation-errors {
+        @extend .alert-danger;
+    }
+    
+    .wpcf7-mail-sent-ok {
+        @extend .alert-ok;
+    }
+}
+
+span[role="alert"] {
+    color: $brand-danger;
+    font-size: .85rem;
+    margin-top: 2px;
+}
+
+.search-form {
+    .search-field {
+        @extend .form-control;
+    }
+    
+    .search-submit {
+        @extend .btn;
+        @extend .btn-primary;
+        
+        color: #fff;
+    }
+}
+
+

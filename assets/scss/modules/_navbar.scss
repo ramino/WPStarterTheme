@@ -1,0 +1,76 @@
+.navbar {
+    flex-direction: row;
+    
+    &-info {
+        font-size: .85rem;
+        color: $brand-light;
+        margin-bottom: 10px;
+        
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: $brand-secondary;
+            vertical-align: middle;
+        }
+        
+        &-item {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        a {
+            color: currentColor;
+        }
+    }
+    
+    p {
+        margin: 0;
+    }
+}
+
+// ---
+// Navbar info
+.navbar-info {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: flex-end;    
+}
+// /Navbar info
+// ---
+
+// ---
+// Collapse
+.navbar-collapse {
+    flex-basis: 100%;
+    
+    @include media-breakpoint-up(lg) {
+        flex-basis: inherit;
+        display: flex;
+    }
+}
+
+.collapse {
+    @include media-breakpoint-up(lg) {
+        //display: block;
+    }
+}
+// /Collapse
+// ---
+
+// ---
+// Toggler
+.navbar-toggler {
+    display: block;
+    flex-basis: inherit;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: $btn-padding-y $btn-padding-x;
+    
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+// /Toggler
+// ---

@@ -1,0 +1,7 @@
+.banner {
+    background-attachment: fixed;
+    
+    &-gradient {
+        background-color: rgba($brand-primary, .8);
+    }
+}

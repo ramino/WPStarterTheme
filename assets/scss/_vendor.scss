@@ -1,0 +1,23 @@
+/*
+	All vendor styles
+ */
+
+// Bootstrap
+@import "../vendor/bootstrap/scss/mixins";
+
+// WPStarterTheme
+//@import "vendor/WPStarterStatic/scss/reseter";
+@import "../vendor/WPStarterStatic/assets/scss/variables";
+
+@import "../vendor/WPStarterStatic/assets/scss/base";
+@import "../vendor/WPStarterStatic/assets/scss/layout";
+
+@import "../vendor/WPStarterStatic/assets/scss/typo";
+@import "../vendor/WPStarterStatic/assets/scss/alerts";
+@import "../vendor/WPStarterStatic/assets/scss/buttons";
+@import "../vendor/WPStarterStatic/assets/scss/forms";
+@import "../vendor/WPStarterStatic/assets/scss/lists";
+
+//@import "../vendor/WPStarterStatic/assets/scss/progress";
+@import "../vendor/WPStarterStatic/assets/scss/tables";
+@import "../vendor/WPStarterStatic/assets/scss/site";

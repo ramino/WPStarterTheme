@@ -1,0 +1,38 @@
+/*
+	Theme Name: WPStarterTheme
+	Theme URI: http://www.ramino.sk/starter-sablona/
+	Author: ramino.sk
+	Author URI: https://www.ramino.sk/
+	Description: Default WordPress Starter theme for business or blogs.
+	Version: 1
+*/
+
+@import "variables";
+
+// WPStarterStatic
+//@import "../vendor/WPStarterStatic/styles";
+
+// If offline
+@import "../../../../../../WPStarterStatic/styles.scss";
+
+
+// Base styles
+@import "mixins"; 
+@import "site";
+
+// Partials
+@import "partials/articles";
+@import "partials/footer";
+@import "partials/header";
+
+// Modules
+@import "modules/box";
+@import "modules/banner";
+@import "modules/breadcrumb";
+@import "modules/comments";
+@import "modules/forms";
+@import "modules/gallery";
+@import "modules/nav";
+@import "modules/navbar";
+@import "modules/typo";
+@import "modules/widget";

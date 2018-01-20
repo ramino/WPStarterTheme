@@ -1,0 +1,120 @@
+/*
+	Site builder plugin modifiers
+ */
+
+.panel-grid {
+	@include clearfix();
+
+	margin-bottom: 0 !important;
+	padding: 10px 0;
+	
+	&#pg-61-2,
+	&#pg-61-3,
+	&#pg-61-6,
+	&#pg-61-7, {
+		background-color: #f7f7f7;
+	}
+	
+	&:nth-child(odd) {
+		padding-top: 40px;
+	}
+	
+	&:nth-child(even) {
+		padding-bottom: 40px;
+	}
+}
+
+.panel-row-style {
+	//@extend .container;
+	
+	&.panel-primary {
+		color: $brand-primary;
+	}
+	
+	&.panel-light {
+		background-color: #f5f5f5;
+	}
+	
+	&[data-stretch-type="full"] {
+		width: 100%;
+		
+		.panel-grid-cell {
+			@extend .container;
+		}
+	}
+	
+	&[data-stretch-type="full-stretched"] {
+		@extend .container;
+	}
+	
+	&.about {
+		.textwidget {
+			div {
+				position: relative;
+				display: inline-block;
+				border: 1px solid #eee;
+				margin-bottom: 10px;
+				background-color: #fff;
+				padding: 12px 16px;
+				border-radius: $base-border-radius;
+				box-shadow: 1px 1px 3px #ddd;
+
+				&:after,
+				&:before {
+					top: 100%;
+					left: 30px;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+				}
+				
+				&:after {
+					border-top-color: #fff;
+					border-width: 10px;
+					margin-left: -10px;
+				}
+				
+				&:before {
+					border-top-color: #ddd;
+					border-width: 11px;
+					margin-left: -11px;
+				}
+			}
+			
+			div + p {
+				font-style: italic;
+				font-weight: 700;
+				margin-bottom: 30px;
+				
+				span {
+					font-weight: normal;
+				} 
+			}
+		}
+	}
+	
+	&.why {
+		.genericon {
+			font-size: 2rem;
+			// ToDo add to variables
+			color: #ff4f5c;
+		}
+	}
+	
+	.panel-title {
+		.widget-title {
+			@include box-title();
+			
+			font-weight: 700;
+			font-size: $h2-font-size;
+		}
+	}
+	
+	.widget-title {
+		color: $brand-dark;		
+	}	
+}
+

@@ -1,0 +1,158 @@
+/*
+ * Styles /box 
+ */
+
+.box-wrapper {
+    position: relative;
+}
+
+// Site box
+.box {
+    .box-testimonial {
+        p:first-child {
+            position: relative;
+            display: inline-block;
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            background-color: #fff;
+            padding: 12px 16px;
+            border-radius: $base-border-radius;
+            box-shadow: 1px 1px 3px #ddd;
+            
+            &:after,
+            &:before {
+                top: 100%;
+                left: 30px;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+            
+            &:after {
+                border-top-color: #fff;
+                border-width: 10px;
+                margin-left: -10px;
+            }
+            
+            &:before {
+                border-top-color: #ddd;
+                border-width: 11px;
+                margin-left: -11px;
+            }
+        }
+    }   
+}
+
+// Sites services
+.box {
+    &-title {
+        color: $brand-primary;
+    }
+
+    &-content {
+        margin: 20px 0;
+    }
+
+    &-article {
+        background-color: #f7f7f7;
+        padding: 10px;
+        margin-bottom: 20px;    
+    }
+    
+    &-image {
+        min-height: 150px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        &:empty {
+            display: none;
+        }
+        
+        &:last-child {
+            min-height: inherit;
+        }
+    }
+
+    &.why {
+        
+        .box-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .generion-wrapper {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            //border: 2px solid $brand-light;
+            line-height: 25px;
+            text-align: center;
+
+            span {
+                font-size: 2.4rem;
+                color: $brand-light;
+            }
+        }
+
+    }
+}
+
+.box {
+    margin-bottom: 1.6rem;
+    
+    .box-icon {
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+        
+        &--dashboard {
+            -webkit-mask:  url("../img/icon-dashboard.svg") no-repeat 50% 50%;
+            mask: url("../img/icon-dashboard.svg") no-repeat 50% 50%;
+            background-color: $brand-secondary;
+        }
+        
+        &--mobile-tablet {
+            -webkit-mask:  url("../img/icon-mobile-tablet.svg") no-repeat 50% 50%;
+            mask: url("../img/icon-mobile-tablet.svg") no-repeat 50% 50%;
+            background-color: $brand-secondary;
+        }
+        
+        &--seo {
+            -webkit-mask:  url("../img/icon-seo.svg") no-repeat 50% 50%;
+            mask: url("../img/icon-seo.svg") no-repeat 50% 50%;
+            background-color: $brand-secondary;
+        }
+        
+        &--documentation {
+            -webkit-mask:  url("../img/icon-documentation.svg") no-repeat 50% 50%;
+            mask: url("../img/icon-seo.documentation") no-repeat 50% 50%;
+            background-color: $brand-secondary;
+        }
+        
+        &--code {
+            -webkit-mask:  url("../img/icon-code.svg") no-repeat 50% 50%;
+            mask: url("../img/icon-seo.code") no-repeat 50% 50%;
+            background-color: $brand-secondary;
+        }
+        
+        &--magic {
+            -webkit-mask:  url("../img/icon-magic.svg") no-repeat 50% 50%;
+            mask: url("../img/icon-magic.code") no-repeat 50% 50%;
+            background-color: $brand-secondary;
+        }
+    }
+}
+
+.box {
+    &--footer {
+        
+    }
+}

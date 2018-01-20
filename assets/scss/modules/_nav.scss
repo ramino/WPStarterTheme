@@ -1,0 +1,34 @@
+
+.collapse {
+    
+}
+
+.nav {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+
+    .menu-item {
+        display: block;
+
+        @include media-breakpoint-up(sm) {
+            display: inline-block;  
+
+            & + .menu-item {
+                margin-left: 10px;
+            }
+        }
+
+        &:before {
+            content: none;
+        }
+        
+        a {
+            color: $brand-primary;
+        }
+    }
+}
+
+.site-description {
+    margin-bottom: 0;
+}

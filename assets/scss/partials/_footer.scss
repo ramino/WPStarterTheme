@@ -1,0 +1,19 @@
+/*
+    Footer styles
+    */
+
+.footer {
+    &-info {
+        color: #fff;
+        font-size: .85rem;
+        
+        a {
+            color: currentColor;
+        }
+        
+        ul {
+            padding-left: 15px;
+            list-style: none;
+        }
+    }
+}

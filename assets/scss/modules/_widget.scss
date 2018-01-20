@@ -1,0 +1,50 @@
+.widget {
+    margin-bottom: 20px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    .post-date {
+        color: lighten($brand-primary, 40%);
+        font-size: 1rem;
+    }
+
+    table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        width: 100%;
+        
+        td {
+            padding: 4px 8px;
+
+            &:first-child {
+                font-weight: 700;
+            }
+        }
+    }
+    
+    &-title {
+        text-transform: uppercase;
+        font-size: 1rem;
+        
+    	&:after {
+    		content: "";
+    		border-top: 3px solid $brand-secondary;
+    		width: 60px;
+    		margin-top: 10px;
+    		display: block;
+    	}
+    }
+}

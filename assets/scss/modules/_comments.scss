@@ -1,0 +1,29 @@
+.comments-area {
+    margin-top: 2rem;
+    
+    h3 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        
+        &:after {
+            content: "";
+            border-top: 3px solid $brand-secondary;
+            width: 60px;
+            margin-top: 10px;
+            display: block;
+        }
+    }
+    
+    .comment-form {
+        label {
+            display: block;
+        }
+        
+        input[type="submit"] {
+            @extend .btn;
+            @extend .btn-primary;
+            
+            color: #fff;
+        }
+    }
+}
